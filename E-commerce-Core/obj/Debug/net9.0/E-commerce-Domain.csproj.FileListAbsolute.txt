@@ -1,0 +1,12 @@
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\bin\Debug\net9.0\E-commerce-Domain.deps.json
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\bin\Debug\net9.0\E-commerce-Domain.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\bin\Debug\net9.0\E-commerce-Domain.pdb
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.AssemblyInfoInputs.cache
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.AssemblyInfo.cs
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.csproj.CoreCompileInputs.cache
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.sourcelink.json
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\refint\E-commerce-Domain.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\E-commerce-Domain.pdb
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Core\obj\Debug\net9.0\ref\E-commerce-Domain.dll
