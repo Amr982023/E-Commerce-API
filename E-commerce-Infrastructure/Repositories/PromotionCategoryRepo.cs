@@ -5,16 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Core.Interfaces;
 using E_commerce_Core.Models;
+using E_commerce_Infrastructure.Repositories.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace E_commerce_Infrastructure.Repositories
 {
-    public class PromotionCategoryRepo : IPromotionCategory
+    public class PromotionCategoryRepo :GenericRepository<PromotionCategory>,IPromotionCategory
     {
-        protected readonly ApplicationDbContext _context;
-        public PromotionCategoryRepo(ApplicationDbContext context)
+        public PromotionCategoryRepo(ApplicationDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task AddCategoriesToPromotionAsync(int promotionId, IEnumerable<int> categoryIds)
