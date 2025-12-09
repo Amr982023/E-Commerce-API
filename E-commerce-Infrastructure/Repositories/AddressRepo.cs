@@ -29,7 +29,7 @@ namespace E_commerce_Infrastructure.Repositories
                 .FirstOrDefaultAsync(a => a.Id == id);
         }
 
-        public async Task<Address> GetDefaultAddressAsync(int accountId, int addressId)
+        public async Task<Address> GetDefaultAddressAsync(int accountId)
         {
             return await _context.Addresses.FirstOrDefaultAsync(a => a.AccountId == accountId && a.IsDefault);
         }

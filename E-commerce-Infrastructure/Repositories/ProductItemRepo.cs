@@ -59,7 +59,7 @@ namespace E_commerce_Infrastructure.Repositories
         .FirstOrDefaultAsync(pi => pi.Id == id);
         }
 
-        public async Task<ProductItem?> GetByOptionsAsync(int productId, IEnumerable<int> optionIds)
+        public async Task<IEnumerable<ProductItem>?> GetByOptionsAsync(int productId, IEnumerable<int> optionIds)
         {
             return await _context.ProductItems
                 .Where(pi => pi.ProductId == productId)
@@ -67,7 +67,7 @@ namespace E_commerce_Infrastructure.Repositories
                     .Select(pc => pc.VariationOptionId)
                     .OrderBy(id => id)
                     .SequenceEqual(optionIds.OrderBy(id => id)))
-                .FirstOrDefaultAsync();
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<ProductItem>> GetByProductIdAsync(int productId)

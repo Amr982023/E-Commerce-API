@@ -33,32 +33,54 @@ namespace E_commerce_Infrastructure.Repositories.UOW
         public IVariation Variations { get; private set; }
         public IVariationOption VariationOptions { get; private set; }
         public IUser Users { get; private set; }
-    
-        public UnitOfWork(ApplicationDbContext context)
+
+        public UnitOfWork(
+        ApplicationDbContext context,
+        IAccount accounts,
+        IAddress addresses,
+        ICountry countries,
+        IOrderLine orderLines,
+        IOrderStatus orderStatuses,
+        IPaymentMethod paymentMethods,
+        IPaymentType paymentTypes,
+        IProduct products,
+        IProductCategory productCategories,
+        IProductConfiguration productConfigurations,
+        IProductItem productItems,
+        IPromotion promotions,
+        IPromotionCategory promotionCategories,
+        IShippingMethod shippingMethods,
+        IShopOrder shopOrders,
+        IShoppingCart shoppingCarts,
+        IShoppingCartItem shoppingCartItems,
+        IUserReview userReviews,
+        IVariation variations,
+        IVariationOption variationOptions,
+        IUser users
+    )
         {
             _context = context;
-            //interfaces
-            Accounts = new AccountRepo(_context);
-            Addresses = new AddressRepo(_context);
-            Countries = new CountryRepo(_context);
-            OrderLines = new OrderLineRepo(_context);
-            OrderStatuses = new OrderStatusRepo(_context);
-            PaymentMethods = new PaymentMethodRepo(_context);
-            PaymentTypes = new PaymentTypeRepo(_context);
-            Products = new ProductRepo(_context);
-            ProductCategories = new ProductCategoryRepo(_context);
-            ProductConfigurations = new ProductConfigurationRepo(_context);
-            ProductItems = new ProductItemRepo(_context);
-            Promotions = new PromotionRepo(_context);
-            PromotionCategories = new PromotionCategoryRepo(_context);
-            ShippingMethods = new ShippingMethodRepo(_context);
-            ShopOrders = new ShopOrderRepo(_context);
-            ShoppingCarts = new ShoppingCartRepo(_context);
-            ShoppingCartItems = new ShoppingCartItemRepo(_context);
-            UserReviews = new UserReviewRepo(_context);
-            Variations = new VariationRepo(_context);
-            VariationOptions = new VariationOptionRepo(_context);
-            Users = new UserRepo(_context);
+            Accounts = accounts;
+            Addresses = addresses;
+            Countries = countries;
+            OrderLines = orderLines;
+            OrderStatuses = orderStatuses;
+            PaymentMethods = paymentMethods;
+            PaymentTypes = paymentTypes;
+            Products = products;
+            ProductCategories = productCategories;
+            ProductConfigurations = productConfigurations;
+            ProductItems = productItems;
+            Promotions = promotions;
+            PromotionCategories = promotionCategories;
+            ShippingMethods = shippingMethods;
+            ShopOrders = shopOrders;
+            ShoppingCarts = shoppingCarts;
+            ShoppingCartItems = shoppingCartItems;
+            UserReviews = userReviews;
+            Variations = variations;
+            VariationOptions = variationOptions;
+            Users = users;
         }
 
         public int Complete()
