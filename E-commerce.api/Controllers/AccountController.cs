@@ -4,6 +4,7 @@ using E_commerce_Application.Services_Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 
 namespace E_commerce.api.Controllers
@@ -20,6 +21,7 @@ namespace E_commerce.api.Controllers
         }
 
         // ================== Register ==================
+        [EnableRateLimiting("fixed")]
         [HttpPost("register")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -38,6 +40,7 @@ namespace E_commerce.api.Controllers
 
 
         // ================== Authenticate ==================
+        [EnableRateLimiting("fixed")]
         [HttpPost("login")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -127,7 +130,7 @@ namespace E_commerce.api.Controllers
 
 
         // ================== Update / Change Password ==================
-
+        [EnableRateLimiting("fixed")]
         [HttpPut("change-password/{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
