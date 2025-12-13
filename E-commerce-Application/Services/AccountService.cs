@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
 using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Validation;
 using E_commerce_Core.Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
@@ -35,6 +36,12 @@ namespace E_commerce_Application.Services
                 throw new InvalidOperationException("Phone already exists.");
             if (await _uow.Users.GetByEmailAsync(model.Email) != null)
                 throw new InvalidOperationException("Email already exists.");
+           if (!clsValidation.ValidatePassword(model.Password))               
+                throw new InvalidOperationException("Password does not meet complexity requirements.");
+           if (!clsValidation.ValidateEmail(model.Email))
+                throw new InvalidOperationException("Email format is invalid.");
+            if (!clsValidation.ValidatePhone(model.Phone))
+                throw new InvalidOperationException("Phone format is invalid.");
 
             // create user
             var user = new User
@@ -168,6 +175,10 @@ namespace E_commerce_Application.Services
         // CHANGE PASSWORD   
         public async Task<bool> ChangePasswordAsync(int accountId, string oldPassword, string newPassword)
         {
+            var Valid = clsValidation.ValidatePassword(newPassword);
+            if (!Valid)
+                throw new InvalidOperationException("New password does not meet complexity requirements.");
+
             var account = await _uow.Accounts.GetByIdAsync(accountId);
             if (account == null)
                 return false;

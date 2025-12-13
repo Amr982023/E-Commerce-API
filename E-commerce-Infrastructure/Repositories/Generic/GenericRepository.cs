@@ -155,7 +155,7 @@ namespace E_commerce_Infrastructure.Repositories.Generic
             return entity;
         }
 
-        public async Task<T> AddAsync(T entity)
+        public virtual async Task<T> AddAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
             return entity;
