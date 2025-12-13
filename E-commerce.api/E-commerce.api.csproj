@@ -18,11 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\E-commerce-Application\E-commerce-Application.csproj" />
     <ProjectReference Include="..\E-commerce-Infrastructure\E-commerce-Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

@@ -10,3 +10,7 @@ D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\De
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\Debug\net9.0\refint\E-commerce-Application.dll
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\Debug\net9.0\E-commerce-Application.pdb
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\Debug\net9.0\ref\E-commerce-Application.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\Debug\net9.0\E-commerce-Application.csproj.AssemblyReference.cache
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\bin\Debug\net9.0\E-commerce-Domain.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\bin\Debug\net9.0\E-commerce-Domain.pdb
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce-Application\obj\Debug\net9.0\E-commer.0D7B98D2.Up2Date

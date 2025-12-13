@@ -1652,6 +1652,19 @@
           }
         }
       },
+      "E-commerce-Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "E-commerce-Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-commerce-Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-commerce-Application.dll": {}
+        }
+      },
       "E-commerce-Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -4842,6 +4855,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "E-commerce-Application/1.0.0": {
+      "type": "project",
+      "path": "../E-commerce-Application/E-commerce-Application.csproj",
+      "msbuildProject": "../E-commerce-Application/E-commerce-Application.csproj"
+    },
     "E-commerce-Domain/1.0.0": {
       "type": "project",
       "path": "../E-commerce-Core/E-commerce-Domain.csproj",
@@ -4855,6 +4873,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "E-commerce-Application >= 1.0.0",
       "E-commerce-Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.11",
       "Microsoft.EntityFrameworkCore >= 9.0.11",
@@ -4894,6 +4913,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\E-commerce-Application.csproj": {
+              "projectPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\E-commerce-Application.csproj"
+            },
             "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj": {
               "projectPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj"
             }

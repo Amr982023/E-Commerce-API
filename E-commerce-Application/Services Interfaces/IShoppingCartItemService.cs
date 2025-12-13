@@ -11,8 +11,8 @@ namespace E_commerce_Application.Services_Interfaces
     {
         Task<IEnumerable<CartItemDto>> GetItemsAsync(int accountId);
         Task<CartItemDto?> GetItemAsync(int accountId, int productItemId);
-        Task<CartItemDto?> GetItemWithDetailsAsync(int accountId, int productItemId);
-        Task<IEnumerable<CartItemDto>> GetItemsWithDetailsAsync(int accountId);
+        Task<ShoppingCartItemWithDetailsDto?> GetItemWithDetailsAsync(int accountId, int productItemId);
+        Task<IEnumerable<ShoppingCartItemWithDetailsDto>> GetItemsWithDetailsAsync(int accountId);
 
         Task UpdateItemQuantityAsync(int accountId, int productItemId, int qty);
         Task<decimal> GetItemTotalPriceAsync(int accountId, int productItemId);

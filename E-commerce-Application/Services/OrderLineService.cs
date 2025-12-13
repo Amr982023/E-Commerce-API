@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.OrderLineDTOs;
+using E_commerce_Application.DTOs.OrderLineDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
@@ -46,13 +47,13 @@ namespace E_commerce_Application.Services
         }
 
         // Get line with details (includes)
-        public async Task<OrderLineDto?> GetLineWithDetailsAsync(int orderId, int productItemId)
+        public async Task<OrderLineWithDetailsDto?> GetLineWithDetailsAsync(int orderId, int productItemId)
         {
             var line = await _uow.OrderLines.GetOrderLineWithDetailsAsync(orderId, productItemId);
             if (line == null)
                 return null;
 
-            var dto = line.Adapt<OrderLineDto>();
+            var dto = line.Adapt<OrderLineWithDetailsDto>();
             dto.LineTotal = _uow.OrderLines.CalculateLineTotal(line);
             return dto;
         }

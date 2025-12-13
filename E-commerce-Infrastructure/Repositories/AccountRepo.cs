@@ -20,7 +20,7 @@ namespace E_commerce_Infrastructure.Repositories
         {  
         }
 
-        public async Task<Account> AuthenticateUserAsync(string username, string password)
+        public async Task<Account> AuthenticateAsync(string username, string password)
         {
             // 1) Get user by username
             var account = await _context.Accounts

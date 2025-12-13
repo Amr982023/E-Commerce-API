@@ -13,6 +13,6 @@ namespace E_commerce_Core.Interfaces
 
         Task<Account> GetAccountWithDetailsAsync(int id);
 
-        Task<Account> AuthenticateUserAsync(string username, string password);
+        Task<Account> AuthenticateAsync(string username, string password);
     }
 }

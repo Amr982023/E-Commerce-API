@@ -23,7 +23,7 @@ namespace E_commerce_Infrastructure.Repositories
                 .Where(vo => vo.VariationId == variationId)
                 .Select(vo => new VariationOptionDto
                 {
-                    OptionId = vo.Id,
+                    Id = vo.Id,
                     Value = vo.Value
                 })
                 .ToListAsync();

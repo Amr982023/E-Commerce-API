@@ -10,7 +10,7 @@ namespace E_commerce_Core.DTOS
         public class VariationWithOptionsDto
         {
             public int VariationId { get; set; }
-            public string VariationName { get; set; } // Color
+            public required string VariationName { get; set; } // Color
             public List<VariationOptionDto> Options { get; set; } = new();
         }
     

@@ -7,6 +7,7 @@ using E_commerce_Application.DTOs.CartItemDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
+using Mapster;
 using static E_commerce_Application.Mapping.CartItemMapping;
 
 namespace E_commerce_Application.Services
@@ -35,17 +36,17 @@ namespace E_commerce_Application.Services
         }
 
         // Get single item with details (if repo includes navigations)
-        public async Task<CartItemDto?> GetItemWithDetailsAsync(int accountId, int productItemId)
+        public async Task<ShoppingCartItemWithDetailsDto?> GetItemWithDetailsAsync(int accountId, int productItemId)
         {
             var item = await _uow.ShoppingCartItems.GetItemWithDetailsAsync(accountId, productItemId);
-            return item == null ? null : CartItemMapToDto(item);
+            return item == null ? null : item.Adapt<ShoppingCartItemWithDetailsDto>();
         }
 
         // Get all items with details (includes ProductItem & Product)
-        public async Task<IEnumerable<CartItemDto>> GetItemsWithDetailsAsync(int accountId)
+        public async Task<IEnumerable<ShoppingCartItemWithDetailsDto>> GetItemsWithDetailsAsync(int accountId)
         {
             var items = await _uow.ShoppingCartItems.GetItemsWithDetailsAsync(accountId);
-            return items.Select(CartItemMapToDto).ToList();
+            return items.Adapt<IEnumerable<ShoppingCartItemWithDetailsDto>>();
         }
 
         // Update quantity

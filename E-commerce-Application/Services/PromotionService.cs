@@ -71,9 +71,10 @@ namespace E_commerce_Application.Services
         }
 
         // Apply best discount to price
-        public async Task<ApplyPromotionResultDto> ApplyBestDiscountAsync(int productItemId, decimal basePrice)
+        public async Task<ApplyPromotionResultDto> ApplyBestDiscountAsync(int productItemId)
         {
             var bestRate = await GetBestDiscountRateForProductItemAsync(productItemId);
+            var basePrice = await _uow.ProductItems.GetCurrentPriceAsync(productItemId);
 
             var discountAmount = Math.Round(basePrice * bestRate, 2);
             var finalPrice = basePrice - discountAmount;

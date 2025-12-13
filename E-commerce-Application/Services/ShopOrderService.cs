@@ -100,7 +100,7 @@ namespace E_commerce_Application.Services
             return orders.Adapt<IEnumerable<ShopOrderSummaryDto>>();
         }
 
-        // ------------ Commands (Cancel / Confirm / Set methods) -------------
+        // ------------(Cancel / Confirm / Set methods) -------------
         public async Task CancelOrderAsync(int orderId)
         {           
             await _uow.ShopOrders.CancelOrderAsync(orderId);

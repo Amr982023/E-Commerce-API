@@ -17,7 +17,7 @@ namespace E_commerce_Application.Services_Interfaces
 
         // Discount calculations
         Task<decimal> GetBestDiscountRateForProductItemAsync(int productItemId);
-        Task<ApplyPromotionResultDto> ApplyBestDiscountAsync(int productItemId, decimal basePrice);
+        Task<ApplyPromotionResultDto> ApplyBestDiscountAsync(int productItemId);
 
         // CRUD 
         Task<PromotionDto> CreateAsync(PromotionDto dto);

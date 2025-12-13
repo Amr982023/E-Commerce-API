@@ -53,7 +53,7 @@ namespace E_commerce_Infrastructure.Repositories
                     VariationName = v.Name,
                     Options = v.Options.Select(o => new VariationOptionDto
                     {
-                        OptionId = o.Id,
+                        Id = o.Id,
                         Value = o.Value
                     }).ToList()
                 })

@@ -6,6 +6,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
+using E_commerce_Application.DTOs.AccountDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
@@ -27,15 +28,15 @@ namespace E_commerce_Application.Services
         // REGISTER
         public async Task<AccountDto> RegisterAsync(RegisterAccountDto model)
         {
-            // Check unique username,Phone, Email
+            // validation checks
             if (await UsernameExistsAsync(model.UserName))
-                throw new Exception("Username already exists.");
-            if (await _uow.Users.GetByPhoneAsync(model.Phone)!= null)
-                throw new Exception("Phone already exists.");
-            if (await _uow.Users.GetByEmailAsync(model.Email)!=null)
-                throw new Exception("Email already exists.");
+                throw new InvalidOperationException("Username already exists.");
+            if (await _uow.Users.GetByPhoneAsync(model.Phone) != null)
+                throw new InvalidOperationException("Phone already exists.");
+            if (await _uow.Users.GetByEmailAsync(model.Email) != null)
+                throw new InvalidOperationException("Email already exists.");
 
-            // Create user
+            // create user
             var user = new User
             {
                 FirstName = model.FirstName,
@@ -43,38 +44,66 @@ namespace E_commerce_Application.Services
                 Phone = model.Phone,
                 Email = model.Email
             };
-            await _uow.Users.AddAsync(user);
-            await _uow.CompleteAsync();
 
+            // create address 
+            var address = new Address
+            {
+                UnitNumber = model.UnitNumber,
+                City = model.City,
+                Street = model.Street,
+                Region = model.Region,
+                PostalCode = model.PostalCode,
+                IsDefault = model.IsAddressDefault,
+                CountryId = model.CountryId
+                
+            };
+
+            // create payment method 
+            var paymentMethod = new PaymentMethod
+            {
+                PaymentTypeId = model.PaymentTypeId,
+                AccountNumber = model.AccountNumber,
+                Provider = model.Provider,
+                ExpiryDate = model.ExpiryDate,
+                IsDefault = model.IsPaymentMethodDefault              
+            };
+
+            // shopping cart
+            var shoppingCart = new ShoppingCart
+            { 
+            };
+
+            // hash password
             var hashedPassword = PasswordHasher.Hash(model.Password);
 
-            // Create account
+            // create account and wire navigation properties
             var account = new Account
             {
+                User = user,
                 UserName = model.UserName,
                 Password = hashedPassword,
-                UserId = user.Id,
                 CreatedAt = DateTime.UtcNow,
-                UserRole = model.UserRole
+                UserRole = model.UserRole,
+                ShoppingCart = shoppingCart,
+                Addresses = new List<Address> { address },
+                PaymentMethods = new List<PaymentMethod> { paymentMethod }
             };
 
             await _uow.Accounts.AddAsync(account);
+
             await _uow.CompleteAsync();
 
-           
             return account.Adapt<AccountDto>();
         }
 
         // AUTHENTICATE (LOGIN)
         public async Task<AccountDto> AuthenticateAsync(string username, string password)
         {
-            var account = await _uow.Accounts.GetAccountByUsernameAsync(username);
+            var account = await _uow.Accounts.AuthenticateAsync(username,password);
             if (account == null)
                 return null;
 
-            // verify the input password against stored hashed password
-            if (!PasswordHasher.Verify(password, account.Password))
-                return null;
+            account.Password = string.Empty; // Hide password
 
             return account.Adapt<AccountDto>();
         }
@@ -92,10 +121,10 @@ namespace E_commerce_Application.Services
             return acc == null ? null : acc.Adapt<AccountDto>();
         }
 
-        public async Task<AccountDto> GetWithDetailsAsync(int accountId)
+        public async Task<AccountWithDetailsDto> GetWithDetailsAsync(int accountId)
         {
             var acc = await _uow.Accounts.GetAccountWithDetailsAsync(accountId);
-            return acc == null ? null : acc.Adapt<AccountDto>();
+            return acc == null ? null : acc.Adapt<AccountWithDetailsDto>();
         }
 
         public async Task<IEnumerable<AccountDto>> GetAllAsync()
@@ -153,8 +182,7 @@ namespace E_commerce_Application.Services
 
             return true;
         }
-
-     
+ 
         // DELETE
         public async Task<bool> DeleteAccountAsync(int accountId)
         {
