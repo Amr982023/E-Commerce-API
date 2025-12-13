@@ -46,11 +46,5 @@ namespace E_commerce_Infrastructure.Services
             }
         }
 
-        public async Task SendResetOTP(string toEmail, string resetCode)
-        {
-            await SendMessageAsync(toEmail, $"Your reset OTP is: {resetCode}");
-
-        }
-
     }
 }

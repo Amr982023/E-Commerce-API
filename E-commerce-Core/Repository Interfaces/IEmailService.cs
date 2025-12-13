@@ -9,8 +9,6 @@ namespace E_commerce_Core.Repository_Interfaces
     public interface IEmailService
     {
         Task SendMessageAsync(string toEmail, string Message);
-
-        Task SendResetOTP(string toEmail, string resetCode);
     }
 
 }
