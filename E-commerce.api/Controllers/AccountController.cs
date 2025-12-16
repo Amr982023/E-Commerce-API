@@ -18,6 +18,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
@@ -30,6 +31,7 @@ namespace E_commerce.api.Controllers
         }
 
         // ================== Register ==================
+        [AllowAnonymous]
         [EnableRateLimiting("fixed")]
         [HttpPost("register")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status201Created)]

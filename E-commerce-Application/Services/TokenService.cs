@@ -21,10 +21,22 @@ namespace E_commerce_Application.Services
             _configuration = configuration;
         }
 
+        string GetRole(short role)
+        {
+            return role switch
+            {
+                1 => "Admin",
+                2 => "Customer",
+                3 => "Seller",
+                4 => "Delivery",
+                5 => "Support"
+            };
+        }
+
         public string GenerateToken(AccountDto account)
         {
             var TokenHandler = new JwtSecurityTokenHandler();
-            var options = _configuration.GetSection("jwt").Get<jwtOptions>();
+            var options = _configuration.GetSection("Jwt").Get<JwtOptions>();
 
             var TokenDescriptor = new SecurityTokenDescriptor
             {
@@ -37,7 +49,7 @@ namespace E_commerce_Application.Services
                     new(ClaimTypes.NameIdentifier , account.Id.ToString()),
                     new(ClaimTypes.Name , account.UserName),
                     new(ClaimTypes.Email , account.Email),
-                    new(ClaimTypes.Role , account.UserRole.ToString()),
+                    new(ClaimTypes.Role , GetRole(account.UserRole)),
                     new( "UserId" , account.UserId.ToString())
                 })
             };

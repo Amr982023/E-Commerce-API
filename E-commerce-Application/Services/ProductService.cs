@@ -7,6 +7,7 @@ using E_commerce_Application.DTOs.ProductDTOs;
 using E_commerce_Application.DTOs.ProductItemDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
+using E_commerce_Core.Models;
 using Mapster;
 
 namespace E_commerce_Application.Services
@@ -78,6 +79,35 @@ namespace E_commerce_Application.Services
             return dto;
         }
 
+        public async Task<int> CreateAsync(Create_updateProductDto dto)
+        {
+            var product = dto.Adapt<Product>();
+            _uow.Products.Add(product);
+            await _uow.CompleteAsync();
+
+            return product.Id;
+        }
+
+        public async Task<bool> UpdateAsync(int productId, Create_updateProductDto dto)
+        {
+            var product = _uow.Products.GetByIdAsync(productId);
+            if (product == null)
+                return false;
+            var updatedProduct = dto.Adapt<Product>();
+            _uow.Products.Update(updatedProduct);
+           await _uow.CompleteAsync();
+            return true;
+        }
+
+        public async Task<bool> DeleteAsync(int productId)
+        {
+            var product = await _uow.Products.GetByIdAsync(productId);
+            if (product == null)
+                return false;
+            _uow.Products.Delete(product);
+            await _uow.CompleteAsync();
+            return true;
+        }
     }
 
 }

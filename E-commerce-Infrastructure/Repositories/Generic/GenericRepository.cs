@@ -16,7 +16,7 @@ namespace E_commerce_Infrastructure.Repositories.Generic
 
         public GenericRepository(ApplicationDbContext context)
         {
-            context = _context;
+            _context = context;
         }
 
         public IEnumerable<T> GetAll()

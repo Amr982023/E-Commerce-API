@@ -1,5 +1,6 @@
 ﻿using E_commerce_Application.DTOs.ProductCategoryDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductCategoryController : ControllerBase
     {
         private readonly IProductCategoryService _categoryService;
@@ -62,6 +64,7 @@ namespace E_commerce.api.Controllers
 
 
         // GET: api/productcategory/search?term=shoes
+        [AllowAnonymous]
         [HttpGet("search")]
         [ProducesResponseType(typeof(IEnumerable<CategoryDto>), StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<CategoryDto>>> Search([FromQuery] string term)

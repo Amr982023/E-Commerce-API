@@ -1,6 +1,7 @@
 ﻿using E_commerce_Application.DTOs.VariationDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.DTOS;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class VariationController : ControllerBase
     {
         private readonly IVariationService _service;
@@ -117,6 +119,7 @@ namespace E_commerce.api.Controllers
         [HttpPut("{variationId:int}/rename")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Rename(int variationId,[FromQuery] string name)
         {
             if (variationId <= 0)
@@ -139,6 +142,7 @@ namespace E_commerce.api.Controllers
         [HttpPost("{variationId:int}/options")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddOption(int variationId,[FromQuery] string value)
         {
             if (variationId <= 0)
@@ -162,6 +166,7 @@ namespace E_commerce.api.Controllers
         [HttpDelete("options/{variationOptionId:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RemoveOption(int variationOptionId)
         {
             if (variationOptionId <= 0)

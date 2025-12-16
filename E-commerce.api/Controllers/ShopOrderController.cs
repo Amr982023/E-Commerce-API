@@ -1,6 +1,7 @@
 ﻿using E_commerce_Application.DTOs.ShopOrderDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Consts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Policy = "ViewOrders")]
     public class ShopOrderController : ControllerBase
     {
         private readonly IShopOrderService _service;
@@ -76,6 +78,7 @@ namespace E_commerce.api.Controllers
         [ProducesResponseType(typeof(ShopOrderSummaryDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Policy = "ViewOrders")]
         public async Task<ActionResult<ShopOrderSummaryDto>> GetLastOrder(int accountId)
         {
             if (accountId <= 0)
@@ -94,6 +97,7 @@ namespace E_commerce.api.Controllers
         [HttpGet("status/{status:int}")]
         [ProducesResponseType(typeof(IEnumerable<ShopOrderSummaryDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Policy = "ViewOrders")]
         public async Task<ActionResult<IEnumerable<ShopOrderSummaryDto>>> GetByStatus(int status)
         {
             if (status <= 0)
@@ -110,6 +114,7 @@ namespace E_commerce.api.Controllers
         // GET: api/shoporder/pending
         [HttpGet("pending")]
         [ProducesResponseType(typeof(IEnumerable<ShopOrderSummaryDto>), StatusCodes.Status200OK)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<ActionResult<IEnumerable<ShopOrderSummaryDto>>> GetPending()
         {
             var orders = await _service.GetPendingOrdersAsync();
@@ -121,6 +126,7 @@ namespace E_commerce.api.Controllers
         // GET: api/shoporder/range?start=2025-01-01&end=2025-01-31
         [HttpGet("range")]
         [ProducesResponseType(typeof(IEnumerable<ShopOrderSummaryDto>), StatusCodes.Status200OK)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<ActionResult<IEnumerable<ShopOrderSummaryDto>>> GetInRange([FromQuery] DateTime start,[FromQuery] DateTime end)
         {
             var orders = await _service.GetOrdersInRangeAsync(start, end);
@@ -135,6 +141,7 @@ namespace E_commerce.api.Controllers
         [HttpPut("{orderId:int}/cancel")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<IActionResult> Cancel(int orderId)
         {
             if (orderId <= 0)
@@ -151,6 +158,7 @@ namespace E_commerce.api.Controllers
         [HttpPut("{orderId:int}/confirm")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<IActionResult> Confirm(int orderId)
         {
             if (orderId <= 0)
@@ -204,6 +212,7 @@ namespace E_commerce.api.Controllers
         // GET: api/shoporder/reports/today-sales
         [HttpGet("reports/today-sales")]
         [ProducesResponseType(typeof(decimal), StatusCodes.Status200OK)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<ActionResult<decimal>> GetTodaySales()
         {
             var total = await _service.GetTodaySalesAsync();
@@ -215,6 +224,7 @@ namespace E_commerce.api.Controllers
         // GET: api/shoporder/reports/average-order-value
         [HttpGet("reports/average-order-value")]
         [ProducesResponseType(typeof(decimal), StatusCodes.Status200OK)]
+        [Authorize(Policy = "ManageOrders")]
         public async Task<ActionResult<decimal>> GetAverageOrderValue()
         {
             var avg = await _service.GetAverageOrderValueAsync();

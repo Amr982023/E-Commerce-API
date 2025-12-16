@@ -1,6 +1,7 @@
 ﻿using E_commerce_Application.Dtos.OrderLineDTOs;
 using E_commerce_Application.DTOs.OrderLineDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderLineController : ControllerBase
     {
         private readonly IOrderLineService _orderLineService;

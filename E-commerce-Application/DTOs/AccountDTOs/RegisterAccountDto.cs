@@ -39,7 +39,6 @@ namespace E_commerce_Application.Dtos.AccountDTOs
 
         // Payment Method info
         public int PaymentTypeId { get; set; }
-        public int AccountId { get; set; }
         public required string AccountNumber { get; set; }
         public required string Provider { get; set; }
         public DateTime ExpiryDate { get; set; }

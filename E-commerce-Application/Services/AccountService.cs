@@ -120,12 +120,16 @@ namespace E_commerce_Application.Services
 
             account.Password = string.Empty; // Hide password
 
+            
+
             await _uow.EmailService.SendMessageAsync(
                 account.User.Email,
-               $"Login Alert \nHello {account.User.FullName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team"
+               $"Login Alert \nHello {account.User.FirstName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team"
             );
 
             AccountDto accountDto = account.Adapt<AccountDto>();
+            accountDto.Email = account.User.Email;
+
 
             AuthResponseDto response = new AuthResponseDto
             {
@@ -137,13 +141,13 @@ namespace E_commerce_Application.Services
         }
 
         // GET METHODS
-        public async Task<AccountDto> GetByIdAsync(int accountId)
+        public async Task<AccountDto?> GetByIdAsync(int accountId)
         {
             var acc = await _uow.Accounts.GetByIdAsync(accountId);
             return acc == null ? null : acc.Adapt<AccountDto>();
         }
 
-        public async Task<AccountDto> GetByUsernameAsync(string username)
+        public async Task<AccountDto?> GetByUsernameAsync(string username)
         {
             var acc = await _uow.Accounts.GetAccountByUsernameAsync(username);
             return acc == null ? null : acc.Adapt<AccountDto>();

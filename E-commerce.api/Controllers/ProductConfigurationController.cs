@@ -2,6 +2,7 @@
 using E_commerce_Application.DTOs.ProductItemDTOs;
 using E_commerce_Application.DTOs.VariationOptionDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductConfigurationController : ControllerBase
     {
         private readonly IProductConfigurationService _service;

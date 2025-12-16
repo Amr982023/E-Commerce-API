@@ -14,7 +14,9 @@ namespace E_commerce_Application.Services_Interfaces
         Task<IEnumerable<ProductDto>> GetByCategoryAsync(int categoryId);
         Task<IEnumerable<ProductDto>> GetBestSellingAsync(int limit = 10);
         Task<bool> ExistsAsync(int productId);
-
+        Task<int> CreateAsync(Create_updateProductDto dto);
+        Task<bool> UpdateAsync(int productId, Create_updateProductDto dto);
+        Task<bool> DeleteAsync(int productId);
         Task<ProductDetailsDto?> GetProductWithDetailsAsync(int id);
     }
 

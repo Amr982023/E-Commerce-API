@@ -4,11 +4,13 @@ using E_commerce_Core.DTOS;
 using E_commerce_Application.Services_Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductItemController : ControllerBase
     {
         private readonly IProductItemService _service;

@@ -17,8 +17,8 @@ namespace E_commerce_Application.Services_Interfaces
 
         // Read
         Task<AuthResponseDto> AuthenticateAsync(string username, string password);
-        Task<AccountDto> GetByIdAsync(int accountId);
-        Task<AccountDto> GetByUsernameAsync(string username);
+        Task<AccountDto?> GetByIdAsync(int accountId);
+        Task<AccountDto?> GetByUsernameAsync(string username);
         Task<AccountWithDetailsDto> GetWithDetailsAsync(int accountId);
         Task<IEnumerable<AccountDto>> GetAllAsync();
         Task<IEnumerable<AccountDto>> SearchAsync(string? username, string? email);

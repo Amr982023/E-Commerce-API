@@ -24,7 +24,7 @@ namespace E_commerce_Infrastructure.Repositories
         public async Task<Account> AuthenticateAsync(string username, string password)
         {
             // 1) Get user by username
-            var account = await _context.Accounts
+            var account = await _context.Accounts.Include(a => a.User)
                 .SingleOrDefaultAsync(a => a.UserName == username);
 
             if (account == null)
@@ -40,7 +40,7 @@ namespace E_commerce_Infrastructure.Repositories
             return account;
         }
 
-        public async Task<Account> GetAccountByUsernameAsync(string username)
+        public async Task<Account?> GetAccountByUsernameAsync(string username)
         {
             return await _context.Accounts.SingleOrDefaultAsync(a => a.UserName == username);
         }

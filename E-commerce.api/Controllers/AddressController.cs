@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Mapster;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class AddressController : ControllerBase
     {
         private readonly IAddressService _addressService;

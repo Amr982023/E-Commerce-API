@@ -1,6 +1,7 @@
 ﻿using E_commerce_Application.DTOs.ProductCategoryDTOs;
 using E_commerce_Application.DTOs.PromotionDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -85,6 +86,7 @@ namespace E_commerce.api.Controllers
         [HttpGet("productitem/{productItemId:int}/best-rate")]
         [ProducesResponseType(typeof(decimal), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<decimal>> GetBestDiscountRate(int productItemId)
         {
             if (productItemId <= 0)
@@ -118,6 +120,7 @@ namespace E_commerce.api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(PromotionDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<PromotionDto>> Create([FromBody] PromotionDto dto)
         {
             if (!ModelState.IsValid)
@@ -134,6 +137,7 @@ namespace E_commerce.api.Controllers
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(int id, [FromBody] PromotionDto dto)
         {
             if (!ModelState.IsValid)
@@ -156,6 +160,7 @@ namespace E_commerce.api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0)
@@ -175,6 +180,7 @@ namespace E_commerce.api.Controllers
         [HttpPut("{promotionId:int}/categories")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SetCategories(int promotionId,[FromBody] CategoryIdsDto model)
         {
             if (model == null || model.CategoryIds == null)

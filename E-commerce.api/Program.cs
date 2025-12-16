@@ -24,7 +24,7 @@ builder.Services.AddControllers();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
 
-var jwtOptions = builder.Configuration.GetSection("jwt").Get<jwtOptions>();
+var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
 
 builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
 {
@@ -42,6 +42,33 @@ builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.Authenticati
         
         ClockSkew = TimeSpan.Zero
     };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    // Products
+    options.AddPolicy("CreateProduct", policy =>
+        policy.RequireRole("Seller", "Admin"));
+
+    options.AddPolicy("UpdateProduct", policy =>
+        policy.RequireRole("Seller", "Admin"));
+
+    options.AddPolicy("DeleteProduct", policy =>
+        policy.RequireRole("Admin"));
+
+    // Orders
+    options.AddPolicy("ViewOrders", policy =>
+        policy.RequireRole("Admin", "Seller"));
+
+    options.AddPolicy("ManageOrders", policy =>
+        policy.RequireRole("Admin"));
+
+
+    // Users
+    options.AddPolicy("ManageUsers", policy =>
+        policy.RequireRole("Admin"));
+
+
 });
 
 // Rate limiter configuration

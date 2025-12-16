@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using E_commerce_Application.DTOs.ProductCategoryDTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin")]
     public class PromotionCategoryController : ControllerBase
     {
         private readonly IPromotionCategoryService _service;

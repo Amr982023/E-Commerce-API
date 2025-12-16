@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
+              "RelativeDocumentMoniker": "E-commerce.api\\Program.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs*",
+              "RelativeToolTip": "E-commerce.api\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T15:25:00.286Z",
+              "EditorCaption": ""
             }
           ]
         }

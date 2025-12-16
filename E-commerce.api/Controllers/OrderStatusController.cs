@@ -1,5 +1,6 @@
 ﻿using E_commerce_Application.DTOs.OrderStatusDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace E_commerce.api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderStatusController : ControllerBase
     {
         private readonly IOrderStatusService _orderStatusService;
