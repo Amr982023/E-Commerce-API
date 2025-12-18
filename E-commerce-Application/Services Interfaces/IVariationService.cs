@@ -14,7 +14,7 @@ namespace E_commerce_Application.Services_Interfaces
         Task<VariationWithOptionsDto?> GetWithOptionsAsync(int variationId);
 
         Task<IEnumerable<VariationDto>> GetVariationsForProductItemAsync(int productItemId);
-        Task<IEnumerable<VariationOptionDto>> GetOptionsForProductVariationAsync(int productId, int variationId);
+        Task<IEnumerable<VariationOptionsDto>> GetOptionsForProductVariationAsync(int productId, int variationId);
 
         Task<bool> IsVariationUsedAsync(int variationId);
 

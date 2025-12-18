@@ -183,3 +183,6 @@ D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Serilog.Sinks.File.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\cyber security\fundamentals\Projects\E-commerce\E-commerce.api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -15,6 +15,6 @@ namespace E_commerce_Core.Interfaces
         Task<IEnumerable<VariationOption>> GetOptionsForProductAsync(int productId, int variationId);
         Task<IEnumerable<VariationOption>> GetOptionsForProductItemAsync(int productItemId);
         Task<bool> IsOptionUsedAsync(int optionId);
-        Task<IEnumerable<VariationOptionDto>> GetOptionsDtoForVariationAsync(int variationId);
+        Task<IEnumerable<VariationOptionsDto>> GetOptionsDtoForVariationAsync(int variationId);
     }
 }

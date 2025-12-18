@@ -24,7 +24,7 @@ namespace E_commerce_Application.Services_Interfaces
 
         Task<bool> BelongsToProductAsync(int productItemId, int productId);
 
-        Task<IEnumerable<VariationOptionDto>> GetAvailableColorsAsync(int productId);
+        Task<IEnumerable<VariationOptionsDto>> GetAvailableColorsAsync(int productId);
 
         Task<ProductItemStockDto> GetStockSummaryAsync(int productId);
 

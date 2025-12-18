@@ -45,11 +45,11 @@ namespace E_commerce_Application.Services
         }
 
         // Options for variation for specific product
-        public async Task<IEnumerable<VariationOptionDto>> GetOptionsForProductVariationAsync(int productId, int variationId)
+        public async Task<IEnumerable<VariationOptionsDto>> GetOptionsForProductVariationAsync(int productId, int variationId)
         {
             var options = await _uow.Variations.GetOptionsForProductVariationAsync(productId, variationId);
 
-            return options.Adapt<IEnumerable<VariationOptionDto>>();
+            return options.Adapt<IEnumerable<VariationOptionsDto>>();
         }
 
         // Check if variation is used (linked to products/items)

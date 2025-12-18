@@ -51,7 +51,7 @@ namespace E_commerce_Infrastructure.Repositories
                 {
                     VariationId = v.Id,
                     VariationName = v.Name,
-                    Options = v.Options.Select(o => new VariationOptionDto
+                    Options = v.Options.Select(o => new VariationOptionsDto
                     {
                         Id = o.Id,
                         Value = o.Value

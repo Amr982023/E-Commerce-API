@@ -17,11 +17,11 @@ namespace E_commerce_Infrastructure.Repositories
         {
         }
 
-        public async Task<IEnumerable<VariationOptionDto>> GetOptionsDtoForVariationAsync(int variationId)
+        public async Task<IEnumerable<VariationOptionsDto>> GetOptionsDtoForVariationAsync(int variationId)
         {
             return await _context.VariationOptions
                 .Where(vo => vo.VariationId == variationId)
-                .Select(vo => new VariationOptionDto
+                .Select(vo => new VariationOptionsDto
                 {
                     Id = vo.Id,
                     Value = vo.Value

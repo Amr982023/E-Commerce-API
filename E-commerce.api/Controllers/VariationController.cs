@@ -79,9 +79,9 @@ namespace E_commerce.api.Controllers
         // ========================= OPTIONS FOR PRODUCT + VARIATION =========================
         // GET: api/variation/product/10/variation/5/options
         [HttpGet("product/{productId:int}/variation/{variationId:int}/options")]
-        [ProducesResponseType(typeof(IEnumerable<VariationOptionDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<VariationOptionsDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<VariationOptionDto>>> GetOptionsForProductVariation(int productId,int variationId)
+        public async Task<ActionResult<IEnumerable<VariationOptionsDto>>> GetOptionsForProductVariation(int productId,int variationId)
         {
             if (productId <= 0)
                 return BadRequest("Invalid product ID.");

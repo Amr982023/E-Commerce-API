@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\controllers\\paymentmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\controllers\\paymentmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\paymentmethodrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\paymentmethodrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-core\\models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|solutionrelative:e-commerce-core\\models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\dtos\\paymenttypedtos\\paymenttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\dtos\\paymenttypedtos\\paymenttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-core\\models\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|solutionrelative:e-commerce-core\\models\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\e-commerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\e-commerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,144 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRepo.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\UserRepo.cs",
-              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\UserRepo.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\UserRepo.cs*",
-              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\UserRepo.cs*",
-              "ViewState": "AgIAADEAAAAAAAAAAAAmwEEAAABpAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
+              "RelativeDocumentMoniker": "E-commerce.api\\Program.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs*",
+              "RelativeToolTip": "E-commerce.api\\Program.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T13:20:58.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "E-commerce-Application\\Services\\UserService.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\UserService.cs",
-              "RelativeToolTip": "E-commerce-Application\\Services\\UserService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwFAAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T13:17:25.239Z",
+              "WhenOpened": "2025-12-18T16:11:07.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "E-commerce.api\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "E-commerce.api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAIwGgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T13:03:42.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PaymentMethodRepo.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\PaymentMethodRepo.cs",
-              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\PaymentMethodRepo.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\PaymentMethodRepo.cs",
-              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\PaymentMethodRepo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:55:37.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PaymentMethod.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Models\\PaymentMethod.cs",
-              "RelativeDocumentMoniker": "E-commerce-Core\\Models\\PaymentMethod.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Models\\PaymentMethod.cs",
-              "RelativeToolTip": "E-commerce-Core\\Models\\PaymentMethod.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:55:25.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaymentMethodController.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\PaymentMethodController.cs",
-              "RelativeDocumentMoniker": "E-commerce.api\\Controllers\\PaymentMethodController.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\PaymentMethodController.cs",
-              "RelativeToolTip": "E-commerce.api\\Controllers\\PaymentMethodController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAYwJAAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:50:55.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
-              "RelativeDocumentMoniker": "E-commerce.api\\Program.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
-              "RelativeToolTip": "E-commerce.api\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:18:58.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PaymentTypeDto.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\DTOs\\PaymentTypeDTOs\\PaymentTypeDto.cs",
-              "RelativeDocumentMoniker": "E-commerce-Application\\DTOs\\PaymentTypeDTOs\\PaymentTypeDto.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\DTOs\\PaymentTypeDTOs\\PaymentTypeDto.cs",
-              "RelativeToolTip": "E-commerce-Application\\DTOs\\PaymentTypeDTOs\\PaymentTypeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:13:40.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PaymentType.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Models\\PaymentType.cs",
-              "RelativeDocumentMoniker": "E-commerce-Core\\Models\\PaymentType.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Models\\PaymentType.cs",
-              "RelativeToolTip": "E-commerce-Core\\Models\\PaymentType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:13:23.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "E-commerce-Application\\Services\\AccountService.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "E-commerce-Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAwwKcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T11:56:37.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "E-commerce.api\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "E-commerce.api\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAkwIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T11:50:57.207Z",
+              "Title": "E-commerce.api",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\E-commerce.api.csproj",
+              "RelativeDocumentMoniker": "E-commerce.api\\E-commerce.api.csproj",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\E-commerce.api.csproj",
+              "RelativeToolTip": "E-commerce.api\\E-commerce.api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-18T16:11:04.684Z",
               "EditorCaption": ""
             }
           ]

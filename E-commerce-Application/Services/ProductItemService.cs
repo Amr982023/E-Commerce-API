@@ -106,10 +106,10 @@ namespace E_commerce_Application.Services
         }
 
         // Available colors
-        public async Task<IEnumerable<VariationOptionDto>> GetAvailableColorsAsync(int productId)
+        public async Task<IEnumerable<VariationOptionsDto>> GetAvailableColorsAsync(int productId)
         {
             var options = await _uow.ProductItems.GetAvailableColorsAsync(productId);
-            return options.Adapt<IEnumerable<VariationOptionDto>>();
+            return options.Adapt<IEnumerable<VariationOptionsDto>>();
         }
 
         // Stock summary

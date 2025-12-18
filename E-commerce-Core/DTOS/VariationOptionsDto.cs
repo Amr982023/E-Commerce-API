@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace E_commerce_Core.DTOS
 {
 
-    public class VariationOptionDto
+    public class VariationOptionsDto
     {
         public int Id { get; set; }
         
